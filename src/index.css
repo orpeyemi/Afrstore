@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #121212;
+  --color-off-white: #F5F5F5;
+  --color-gold: #D4AF37;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-serif: "Cormorant Garamond", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-charcoal text-off-white font-sans antialiased;
+  }
+
+  h1, h2, h3, .font-display {
+    @apply font-display tracking-tight text-white;
+  }
+
+  .gold-gradient {
+    @apply bg-gradient-to-tr from-gold via-[#F1D592] to-gold;
+  }
+
+  /* Geometric Balance Specifics */
+  .geometric-border {
+    @apply border border-white/5;
+  }
+
+  .tracking-ultra {
+    @apply tracking-[0.3em] uppercase;
+  }
+}
+
+@layer components {
+  .bento-card {
+    @apply relative overflow-hidden rounded-none border border-white/5 bg-white/[0.02] backdrop-blur-sm transition-all duration-700 hover:bg-white/[0.04];
+  }
+
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center px-10 py-4 overflow-hidden text-[11px] font-bold tracking-[0.3em] uppercase transition-all duration-500 bg-gold text-charcoal hover:bg-white;
+  }
+
+  .btn-secondary {
+    @apply relative inline-flex items-center justify-center px-10 py-4 overflow-hidden text-[11px] font-bold tracking-[0.3em] uppercase transition-all duration-500 border border-white/10 text-off-white hover:bg-white hover:text-charcoal;
+  }
+}

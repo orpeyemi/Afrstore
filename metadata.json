@@ -1,0 +1,6 @@
+{
+  "name": "AfriSole",
+  "description": "A luxury e-commerce platform for boutique African-inspired handcrafted footwear, featuring real-time stock tracking and custom 3D design experiences.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": []
+}
